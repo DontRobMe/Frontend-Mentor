@@ -3,60 +3,64 @@ body {
     font-size: 1.5rem;
     line-height: 1.5;
     margin: 0;
+    padding: 2em;
+    background-color: var(--gradient-light);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 2em;
-    overflow: hidden;
+    min-height: calc(100vh - 10em);
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 50%;
-    z-index: 1;
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+    margin-right: 20em;
 }
-
 .logo {
     margin-bottom: 5em;
+    margin-left: 0.3em;
 }
 
-:root {
-    --primary-desaturated-red: hsl(0, 100%, 83%);
-    --primary-soft-red: hsl(0, 95%, 63%);
-    --neutral-dark-grayish-red: hsl(0, 6%, 24%);
-    --gradient-light: hsl(0, 0%, 100%);
-    --gradient-dark: hsl(0, 100%, 98%);
+.header-container {
 }
 
 h1, h2 {
-    margin: 0;
     text-align: left;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 400;
     color: var(--primary-desaturated-red);
     line-height: 1.2;
+    margin-bottom: -0.8em;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 600;
     color: var(--neutral-dark-grayish-red);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    line-height: 1.5;
+    margin-bottom: 0.2em;
 }
 
 p {
     font-size: 1.2rem;
     color: var(--primary-desaturated-red);
-    max-width: 30em;
-    text-align: left;
+    max-width: 25em;
+    margin-bottom: 3em;
+}
+#email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
 }
 
 #email-form {
@@ -154,7 +158,7 @@ form {
     display: none;
     color: red;
     font-size: 16px;
-    padding: 20px;
+    padding: 10px;
     margin-top: 5px;
 }
 
@@ -166,4 +170,23 @@ form {
     transform: translateY(-50%);
     width: 20px;
     height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-right: 0;
+    }
+
+    .image-container {
+        width: 50%;
+    }
+}
+
+
+:root {
+    --primary-desaturated-red: hsl(0, 100%, 83%);
+    --primary-soft-red: hsl(0, 95%, 63%);
+    --neutral-dark-grayish-red: hsl(0, 6%, 24%);
+    --gradient-light: hsl(0, 0%, 100%);
+    --gradient-dark: hsl(0, 100%, 98%);
 }
